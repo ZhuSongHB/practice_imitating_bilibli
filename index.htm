@@ -104,12 +104,12 @@
         <div :class="{'nav-box':navIndex ===1,'hide-height-box':navIndex === 2,hide:navIndex ===2 && navHide}"
             v-for="navIndex in 2">
             <ul class="nav-list">
-                <li class="nav " :class='{big:nav.title.length >=3 && navIndex === 2,active:nav.active}'
-                    v-for="(nav,index) in navList" :key="nav.id" @click=handleActive(nav,index)> {{ nav.title }}
+                <li class="nav " :class='{big:nav.title.length >=3 && navIndex === 2,active:index == navActiveIndex}'
+                    v-for="(nav,index) in navList" :key="nav.id" @click=handleActive(index)> {{ nav.title }}
                 </li>
 
             </ul>
-            <div class="down" v-if='navIndex === 1' @click='handleDown' v-show='navHide'>
+            <div class="down" v-if='navIndex === 1' @click='handleDown'>
                 <svg width='16' height="31" viewBox="0 0 1024 1024">
                     <path
                         d="M515.2 649.6L169.6 304c-12.8-12.8-32-12.8-44.8 0s-12.8 35.2 0 48l368 364.8c12.8 12.8 32 12.8 44.8 0l361.6-361.6c12.8-12.8 12.8-35.2 0-48s-32-12.8-44.8 0L515.2 649.6z"

@@ -13,6 +13,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background: #fff;
+    z-index: 100;
 }
 
 .heard .logo {
@@ -63,6 +64,7 @@ body {
     top: 45px;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .nav-box .nav-list {
@@ -107,17 +109,18 @@ body {
     top: 45px;
     left: 0;
     right: 0;
-    padding-bottom: 25px;
+    overflow: hidden;
+    padding-bottom: 0px;
     background-color: #fff;
+    transition: all .2s;
+    z-index: 2;
 }
 
 .hide-height-box.hide {
-    display: none;
+    top: -45px;
+    z-index: -1;
 }
 
-.hide-height-box .nav-list {
-    width: 100%;
-}
 
 .hide-height-box .nav {
     display: inline-block;
