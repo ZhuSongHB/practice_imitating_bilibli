@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" v-if="bannerList.length">
         <!--  首页头部  -->
         <div class="heard">
             <!-- logo区域 -->
@@ -101,7 +101,7 @@
             </div>
         </div>
         <!-- 导航栏 -->
-        <div :class="{'nav-box':navIndex ===1,'hide-height-box':navIndex === 2,hide:navIndex ===2 && navHide}"
+        <div :class="{'nav-box':navIndex ===1,'hide-height-box':navIndex === 2,hide:navIndex ===2 && navHide }"
             v-for="navIndex in 2">
             <ul class="nav-list">
                 <li class="nav " :class='{big:nav.title.length >=3 && navIndex === 2,active:index == navActiveIndex}'
@@ -123,6 +123,19 @@
                         fill="#ccc"></path>
                 </svg>
             </div>
+        </div>
+        <!-- 轮播图 -->
+        <div class="banner-box">
+            <ul class="banner-list" :style="{ width:bannerCountWidth,...bannerStyle}"
+                @transitionend="handleTransitionEnd">
+                <li v-for='banner in bannerList' :key="banner.id">
+                    <img :src="banner.poster" :alt="banner.title">
+                </li>
+            </ul>
+            <ul class="index-list">
+                <li v-for="index in bannerList.length-1" :key="index" class="index"
+                    :class="{active:index-1 === (bannerActiveIndex ) % 3}"></li>
+            </ul>
         </div>
     </div>
 

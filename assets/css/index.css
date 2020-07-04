@@ -1,5 +1,9 @@
-body {
+/* body {
     background: red;
+} */
+
+[v-cloak] {
+    display: none;
 }
 
 .heard {
@@ -152,4 +156,62 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* 轮播图区域 */
+.banner-box {
+    position: absolute;
+    left: 50%;
+    top: 85px;
+    width: 350px;
+    height: 110px;
+    border-radius: 6px;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.banner-list {
+    position: absolute;
+    left: 0;
+    height: 110px;
+    transition: left .3s;
+}
+
+.banner-list li {
+    float: left;
+    width: 350px;
+    height: 110px;
+}
+
+.banner-list li img {
+    width: 350px;
+    height: 110px;
+}
+
+.banner-box .index-list {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    bottom: 5px;
+    left: 50%;
+    height: 10px;
+    padding: 0 3px;
+    background-color: rgba(0, 0, 0, .5);
+    transform: translateX(-50%);
+}
+
+.banner-box .index-list .index {
+    /* display: inline-block; */
+    width: 5px;
+    height: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 50%;
+    /* visibility: middle; */
+    background-color: #fff;
+}
+
+.banner-box .index-list .index.active {
+    background-color: red;
 }
