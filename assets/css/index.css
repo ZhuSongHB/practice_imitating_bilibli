@@ -3,215 +3,298 @@
 } */
 
 [v-cloak] {
-    display: none;
+  display: none;
+}
+body,
+html {
+  height: 100%;
 }
 
+#app {
+  height: 100%;
+  overflow: scroll;
+}
 .heard {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding-top: 7px;
-    padding-bottom: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  z-index: 100;
 }
 
 .heard .logo {
-    margin-left: 18px;
+  margin-left: 18px;
 }
 
 .heard .search-input {
-    display: flex;
-    align-items: center;
-    width: 132px;
-    height: 24px;
-    margin-left: 5px;
-    font-size: 12px;
-    color: #999;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  width: 132px;
+  height: 24px;
+  margin-left: 5px;
+  font-size: 12px;
+  color: #999;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .heard .search-input svg {
-    margin-left: 7px;
+  margin-left: 7px;
 }
 
 .heard .search-input span {
-    width: 92px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  width: 92px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .heard .avatar svg {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .heard .download-app {
-    width: 78px;
-    height: 23px;
-    line-height: 23px;
-    margin-right: 14px;
-    border-radius: 4px;
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-    background: #fb7299;
+  width: 78px;
+  height: 23px;
+  line-height: 23px;
+  margin-right: 14px;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  background: #fb7299;
 }
 
 .nav-box {
-    position: fixed;
-    top: 45px;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .nav-box .nav-list {
-    width: 85%;
-    overflow-x: scroll;
-    white-space: nowrap;
-    padding-left: 24px;
-    background-color: #fff;
+  width: 85%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-left: 24px;
+  background-color: #fff;
 }
 
 .nav-box .nav-list::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .nav-box .nav {
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
-    margin-right: 32px;
-    color: #757575;
-    font-size: 14px;
-    box-sizing: border-box;
-    border-bottom: 2px solid transparent;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 32px;
+  color: #757575;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-box .nav.active {
-    border-color: #fb7299;
-    color: #fb7299;
+  border-color: #fb7299;
+  color: #fb7299;
 }
 
 .nav-box .down {
-    position: absolute;
-    width: 32px;
-    text-align: center;
-    top: -3px;
-    right: 0;
-    background-color: #fff;
+  position: absolute;
+  width: 32px;
+  text-align: center;
+  top: -3px;
+  right: 0;
+  background-color: #fff;
 }
 
 .hide-height-box {
-    position: fixed;
-    top: 45px;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    padding-bottom: 0px;
-    background-color: #fff;
-    transition: all .2s;
-    z-index: 2;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding-bottom: 0px;
+  background-color: #fff;
+  transition: all 0.2s;
+  z-index: 2;
 }
 
 .hide-height-box.hide {
-    top: -45px;
-    z-index: -1;
+  top: -45px;
+  z-index: -1;
 }
 
-
 .hide-height-box .nav {
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
-    margin-left: 24px;
-    text-align: center;
-    margin-right: 8px;
-    color: #757575;
-    font-size: 14px;
-    box-sizing: border-box;
-    border-bottom: 2px solid transparent;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 24px;
+  text-align: center;
+  margin-right: 8px;
+  color: #757575;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
 }
 
 .hide-height-box .nav.big {
-    width: 46px;
-    font-size: 14px;
-    margin-right: 0px;
-    margin-left: 14px;
+  width: 46px;
+  font-size: 14px;
+  margin-right: 0px;
+  margin-left: 14px;
 }
 
 .hide-height-box .nav.active {
-    border-color: #fb7299;
-    color: #fb7299;
+  border-color: #fb7299;
+  color: #fb7299;
 }
 
 .hide-height-box .up {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* 轮播图区域 */
 .banner-box {
-    position: absolute;
-    left: 50%;
-    top: 85px;
-    width: 350px;
-    height: 110px;
-    border-radius: 6px;
-    transform: translateX(-50%);
-    overflow: hidden;
+  position: relative;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 110px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .banner-list {
-    position: absolute;
-    left: 0;
-    height: 110px;
-    transition: left .3s;
+  position: absolute;
+  left: 0;
+  height: 110px;
+  transition: left 0.3s;
 }
 
 .banner-list li {
-    float: left;
-    width: 350px;
-    height: 110px;
+  float: left;
+  width: 350px;
+  height: 110px;
 }
 
 .banner-list li img {
-    width: 350px;
-    height: 110px;
+  width: 350px;
+  height: 110px;
 }
 
 .banner-box .index-list {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    bottom: 5px;
-    left: 50%;
-    height: 10px;
-    padding: 0 3px;
-    background-color: rgba(0, 0, 0, .5);
-    transform: translateX(-50%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  bottom: 5px;
+  left: 50%;
+  height: 10px;
+  padding: 0 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(-50%);
 }
 
 .banner-box .index-list .index {
-    /* display: inline-block; */
-    width: 5px;
-    height: 5px;
-    margin-left: 3px;
-    margin-right: 3px;
-    border-radius: 50%;
-    /* visibility: middle; */
-    background-color: #fff;
+  /* display: inline-block; */
+  width: 5px;
+  height: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 50%;
+  /* visibility: middle; */
+  background-color: #fff;
 }
 
 .banner-box .index-list .index.active {
-    background-color: red;
+  background-color: red;
+}
+
+/* (内容)视频区域 */
+.video-box {
+  padding-top: 96px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.video-box .video-list::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.video-box .video {
+  float: left;
+  width: 50%;
+}
+
+.video-box .poster {
+  position: relative;
+  height: 106px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.video-box .poster img {
+  width: 100%;
+  height: 100%;
+}
+
+.video-box .poster .info {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-image: linear-gradient(rgba(33, 33, 33, 0), rgba(33, 33, 33, 0.5));
+}
+
+.video-box .poster .info div {
+  display: inline-flex;
+  align-items: center;
+  /* display: inline-block; */
+  margin-right: 20px;
+}
+
+.video-box .poster .info svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+}
+
+.video-box .title {
+  margin: 6px 6px 10px 6px;
+  height: 38px;
+  line-height: 20px;
+  font-size: 13px;
+  /* 单行文本溢出打点：
+    设置文本不换行
+    white-space: nowrap;
+    设置文字溢出用省略号代替
+    text-overflow: ellipsis; */
+  /* 多行文本溢出打点： */
+  overflow: hidden;
+  /* 设置盒子为伸缩盒 */
+  display: -webkit-box;
+  /* 设置伸缩盒内子元素的排列方式为vertical */
+  -webkit-box-orient: vertical;
+  /* 限制一个块元素内显示的文本行数 */
+  -webkit-line-clamp: 2;
 }
